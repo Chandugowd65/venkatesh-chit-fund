@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatesh Goud & Sons Chit Funds - Secure Investments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --secondary-dark: #112240;
+            --accent-blue: #00b4d8;
+            --accent-green: #2ec4b6;
+            --accent-gold: #ffb347;
+            --accent-purple: #9d4edd;
+            --text-light: #e6f1ff;
+            --text-gray: #8892b0;
+            --divine-gold: #ffd700;
+            --divine-orange: #ff8c00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Advanced Background Animations */
+        .advanced-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            overflow: hidden;
+        }
+
+        .gradient-bg {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 180, 216, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(46, 196, 182, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 60%, rgba(157, 78, 221, 0.05) 0%, transparent 50%);
+            animation: gradientMove 20s ease-in-out infinite alternate;
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.4;
+            animation: floatShape 15s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-blue), transparent 70%);
+            top: 10%;
+            left: 5%;
+            animation-duration: 20s;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-green), transparent 70%);
+            top: 60%;
+            right: 10%;
+            animation-duration: 25s;
+            animation-delay: 5s;
+        }
+
+        .shape:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, var(--accent-purple), transparent 70%);
+            bottom: 20%;
+            left: 20%;
+            animation-duration: 18s;
+            animation-delay: 10s;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                transform: translate(0%, 0%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-5%, -5%) rotate(5deg);
+            }
+        }
+
+        @keyframes floatShape {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        /* Divine Background Elements */
+        .divine-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .om-symbol {
+            position: absolute;
+            font-size: 8rem;
+            color: rgba(255, 215, 0, 0.03);
+            opacity: 0.7;
+            animation: rotateOm 60s linear infinite;
+        }
+
+        .om-symbol:nth-child(1) {
+            top: 10%;
+            left: 5%;
+        }
+
+        .om-symbol:nth-child(2) {
+            top: 70%;
+            right: 10%;
+            animation-direction: reverse;
+            animation-duration: 80s;
+        }
+
+        .om-symbol:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-duration: 100s;
+        }
+
+        @keyframes rotateOm {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .header-scrolled {
+            padding: 1rem 5%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .divine-logos {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .divine-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            animation: logoGlow 3s infinite alternate;
+        }
+
+        .ganesh-logo {
+            background: linear-gradient(45deg, var(--divine-orange), var(--divine-gold));
+            animation-delay: 0s;
+        }
+
+        .venkateshwara-logo {
+            background: linear-gradient(45deg, #4a0080, #8a2be2);
+            animation-delay: 1.5s;
+        }
+
+        .money-logo {
+            background: linear-gradient(45deg, var(--accent-green), #00ff88);
+            animation-delay: 0.75s;
+        }
+
+        .divine-logo i {
+            font-size: 2.2rem;
+            color: white;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+        }
+
+        @keyframes logoGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+                transform: scale(1);
+            }
+            100% {
+                box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+                transform: scale(1.05);
+            }
+        }
+
+        .brand-name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .brand-name span {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 0.2rem;
+        }
+
+        .logo-badges {
+            display: flex;
+            gap: 1rem;
+            margin-left: 1rem;
+        }
+
+        .badge {
+            background: rgba(0, 180, 216, 0.1);
+            border: 1px solid rgba(0, 180, 216, 0.3);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 5% 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero h2 span {
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-green), var(--accent-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h2 span::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-green), var(--accent-gold));
+            border-radius: 5px;
+            transform: scaleX(0);
+            transform-origin: right;
+            animation: underlineExpand 1.5s 0.5s forwards ease;
+        }
+
+        @keyframes underlineExpand {
+            to {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .divine-blessing {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .blessing-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .blessing-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 215, 0, 0.1);
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .blessing-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .blessing-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.2), transparent 70%);
+            animation: blessingPulse 2s infinite;
+        }
+
+        @keyframes blessingPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .blessing-icon i {
+            font-size: 3rem;
+            color: var(--divine-gold);
+            position: relative;
+            z-index: 1;
+        }
+
+        .blessing-text {
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: center;
+            max-width: 150px;
+            font-weight: 500;
+            background: rgba(0, 180, 216, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+            z-index: -1;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 180, 216, 0.5);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 5%;
+            background-color: rgba(17, 34, 64, 0.5);
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 1.5rem auto 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: rgba(17, 34, 64, 0.7);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(46, 196, 182, 0.1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-green));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.5s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(0, 180, 216, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: rgba(0, 180, 216, 0.1);
+            color: var(--accent-blue);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        /* Chit Calculator Section */
+        .calculator {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .calculator-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+            align-items: flex-start;
+            margin-top: 3rem;
+        }
+
+        .calculator-controls {
+            flex: 1;
+            min-width: 350px;
+            background-color: rgba(17, 34, 64, 0.7);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(46, 196, 182, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .calculator-controls h3 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .input-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.7rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background-color: rgba(10, 25, 47, 0.8);
+            border: 1px solid rgba(46, 196, 182, 0.2);
+            border-radius: 10px;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-with-icon i {
+            position: absolute;
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--accent-blue);
+        }
+
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .range-container input {
+            flex-grow: 1;
+        }
+
+        .range-value {
+            min-width: 50px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--accent-green);
+            background: rgba(46, 196, 182, 0.1);
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 180, 216, 0.4);
+        }
+
+        .tools-highlight {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(46, 196, 182, 0.2);
+        }
+
+        .tools-highlight h4 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .tool {
+            background: rgba(0, 180, 216, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .calculator-results {
+            flex: 2;
+            min-width: 350px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .results-header h3 {
+            font-size: 2rem;
+            background: linear-gradient(to right, var(--accent-green), var(--accent-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .total-summary {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .summary-card {
+            flex: 1;
+            min-width: 180px;
+            background-color: rgba(17, 34, 64, 0.7);
+            padding: 1.8rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(46, 196, 182, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 180, 216, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .summary-card h4 {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .summary-card p {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-green);
+        }
+
+        .summary-card.total-profit p {
+            color: var(--accent-gold);
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            margin-top: 2rem;
+        }
+
+        .chit-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(17, 34, 64, 0.7);
+            backdrop-filter: blur(10px);
+            min-width: 800px;
+        }
+
+        .chit-table thead {
+            background: linear-gradient(90deg, rgba(0, 180, 216, 0.2), rgba(46, 196, 182, 0.2));
+        }
+
+        .chit-table th {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 2px solid rgba(46, 196, 182, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .chit-table td {
+            padding: 1.2rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(46, 196, 182, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .chit-table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .chit-table tbody tr:hover {
+            background-color: rgba(0, 180, 216, 0.08);
+            transform: scale(1.002);
+        }
+
+        .chit-table .month-cell {
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .chit-table .amount-cell {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .chit-table .total-cell {
+            color: var(--accent-gold);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 5%;
+            background-color: rgba(17, 34, 64, 0.5);
+            position: relative;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 350px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 350px;
+            background-color: rgba(17, 34, 64, 0.7);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(46, 196, 182, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .contact-card {
+            background-color: rgba(17, 34, 64, 0.7);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(46, 196, 182, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 180, 216, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            flex-shrink: 0;
+        }
+
+        .contact-card-content h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .contact-card-content p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .locations-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .location-tag {
+            background: rgba(255, 179, 71, 0.1);
+            color: var(--accent-gold);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 179, 71, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background-color: rgba(10, 25, 47, 0.8);
+            border: 1px solid rgba(46, 196, 182, 0.2);
+            border-radius: 10px;
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.1);
+        }
+
+        .submit-btn {
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 180, 216, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 5% 3rem;
+            background-color: rgba(10, 25, 47, 0.95);
+            border-top: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .footer-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-icon {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(0, 180, 216, 0.1);
+            border: 2px solid rgba(0, 180, 216, 0.2);
+            transition: all 0.4s ease;
+            animation: iconGlow 3s infinite ease-in-out;
+        }
+
+        .footer-icon:nth-child(1) {
+            color: var(--divine-orange);
+            animation-delay: 0s;
+        }
+
+        .footer-icon:nth-child(2) {
+            color: #8a2be2;
+            animation-delay: 1s;
+        }
+
+        .footer-icon:nth-child(3) {
+            color: var(--accent-green);
+            animation-delay: 2s;
+        }
+
+        @keyframes iconGlow {
+            0%, 100% { 
+                box-shadow: 0 0 10px currentColor; 
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px currentColor; 
+                transform: scale(1.05);
+            }
+        }
+
+        .footer-icon i {
+            font-size: 3.5rem;
+        }
+
+        .footer-icon-text {
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: center;
+            font-weight: 500;
+            background: rgba(0, 180, 216, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 180, 216, 0.2);
+        }
+
+        .footer-text {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(17, 34, 64, 0.7);
+            border-radius: 50%;
+            color: var(--text-light);
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(46, 196, 182, 0.2);
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-5px) rotate(10deg);
+            box-shadow: 0 10px 20px rgba(0, 180, 216, 0.3);
+        }
+
+        .copyright {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(46, 196, 182, 0.1);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .hero h2 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.5rem;
+            }
+            
+            .divine-blessing {
+                gap: 2rem;
+            }
+            
+            .blessing-icon {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .blessing-icon i {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: rgba(10, 25, 47, 0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 3rem;
+                transition: left 0.3s ease;
+                gap: 2rem;
+                backdrop-filter: blur(10px);
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            .hero {
+                padding: 8rem 5% 4rem;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .logo-badges {
+                display: none;
+            }
+            
+            .divine-blessing {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .footer-logo {
+                gap: 2rem;
+            }
+            
+            .footer-icon {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .footer-icon i {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .brand-name h1 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card, .calculator-controls, .contact-form {
+                padding: 2rem;
+            }
+            
+            .summary-card {
+                min-width: 100%;
+            }
+            
+            .footer-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .footer-icon i {
+                font-size: 2rem;
+            }
+            
+            .divine-logos {
+                gap: 0.5rem;
+            }
+            
+            .divine-logo {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .divine-logo i {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Advanced Background Animation -->
+    <div class="advanced-bg">
+        <div class="gradient-bg"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+    
+    <!-- Divine Background Elements -->
+    <div class="divine-elements">
+        <div class="om-symbol">ॐ</div>
+        <div class="om-symbol">ॐ</div>
+        <div class="om-symbol">ॐ</div>
+    </div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="logo-container">
+            <div class="divine-logos">
+                <div class="divine-logo ganesh-logo">
+                    <i class="fas fa-om"></i>
+                </div>
+                <div class="divine-logo venkateshwara-logo">
+                    <i class="fas fa-hands-praying"></i>
+                </div>
+                <div class="divine-logo money-logo">
+                    <i class="fas fa-coins"></i>
+                </div>
+            </div>
+            <div class="brand-name">
+                <h1>VENKATESH GOUD & SONS</h1>
+                <span>CHIT FUNDS - Trusted Financial Solutions</span>
+            </div>
+        </div>
+        
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in">
+            <h2>Secure Your Financial Future With <span>Divine-Blessed Chit Investments</span></h2>
+            <p>Venkatesh Goud & Sons Chit Funds offers you a trusted platform for saving and borrowing with attractive returns. Our operations are blessed by Lord Venkateshwara Swamy and Lord Ganesh for your prosperity and success.</p>
+            
+            <div class="divine-blessing">
+                <div class="blessing-item">
+                    <div class="blessing-icon">
+                        <i class="fas fa-om"></i>
+                    </div>
+                    <div class="blessing-text">Lord Ganesh<br>Blessings</div>
+                </div>
+                
+                <div class="blessing-item">
+                    <div class="blessing-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <div class="blessing-text">Lord Venkateshwara<br>Divine Protection</div>
+                </div>
+                
+                <div class="blessing-item">
+                    <div class="blessing-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="blessing-text">Wealth & Prosperity<br>Attraction</div>
+                </div>
+            </div>
+            
+            <a href="#calculator" class="cta-button">Calculate Your Returns <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-title fade-in">
+            <h2>Why Choose Our Chit Fund?</h2>
+            <p>We combine divine blessings with modern financial security and transparency</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>100% Secure & Licensed</h3>
+                <p>Fully licensed and regulated chit fund operations with complete transparency. All transactions are legally documented, insured, and regularly audited for your safety.</p>
+                <div class="feature-tags">
+                    <span class="tag">Licensed</span>
+                    <span class="tag">Insured</span>
+                    <span class="tag">Audited</span>
+                </div>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>High Returns & Flexibility</h3>
+                <p>Attractive returns on your investment with flexible plans tailored to your needs. Our chits offer some of the highest returns in the industry with multiple tenure options.</p>
+                <div class="feature-tags">
+                    <span class="tag">High Returns</span>
+                    <span class="tag">Flexible Plans</span>
+                    <span class="tag">Multiple Tenures</span>
+                </div>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Trusted By Thousands</h3>
+                <p>Decades of trusted service with thousands of satisfied customers. Our reputation is built on reliability, timely payouts, and exceptional customer satisfaction.</p>
+                <div class="feature-tags">
+                    <span class="tag">Trusted</span>
+                    <span class="tag">Reliable</span>
+                    <span class="tag">Customer-First</span>
+                </div>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Quick Disbursement</h3>
+                <p>Fast loan approval and disbursement when you need funds urgently. Get access to funds within 24 hours of auction with minimal documentation.</p>
+                <div class="feature-tags">
+                    <span class="tag">24-Hour Disbursal</span>
+                    <span class="tag">Minimal Docs</span>
+                    <span class="tag">Quick Approval</span>
+                </div>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Digital Management</h3>
+                <p>Manage your chits online with our secure portal. Track payments, view schedules, download statements, and manage your account from anywhere, anytime.</p>
+                <div class="feature-tags">
+                    <span class="tag">Online Portal</span>
+                    <span class="tag">Mobile App</span>
+                    <span class="tag">24/7 Access</span>
+                </div>
+            </div>
+            
+            <div class="feature-card fade-in">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Customer Support</h3>
+                <p>Round-the-clock customer support to address all your queries. Our dedicated team is always ready to assist you via phone, email, or in-person meetings.</p>
+                <div class="feature-tags">
+                    <span class="tag">24/7 Support</span>
+                    <span class="tag">Dedicated Manager</span>
+                    <span class="tag">Multi-channel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chit Calculator Section -->
+    <section class="calculator" id="calculator">
+        <div class="section-title fade-in">
+            <h2>Chit Fund Calculator</h2>
+            <p>Calculate your potential returns and monthly payments with our advanced calculator</p>
+        </div>
+        
+        <div class="calculator-container">
+            <div class="calculator-controls fade-in">
+                <h3>Plan Configuration</h3>
+                <div class="input-group">
+                    <label for="chit-value">Chit Fund Value (₹)</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="chit-value" value="300000" min="50000" max="1000000" step="50000">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="months">Duration (Months)</label>
+                    <select id="months">
+                        <option value="20">20 Months</option>
+                        <option value="25" selected>25 Months</option>
+                        <option value="30">30 Months</option>
+                        <option value="35">35 Months</option>
+                        <option value="40">40 Months</option>
+                        <option value="50">50 Months</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="monthly-payment">Monthly Payment (₹)</label>
+                    <div class="input-with-icon">
+                        <input type="number" id="monthly-payment" value="6000" min="1000" max="50000" step="500">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="discount-rate">Discount Rate (%)</label>
+                    <div class="range-container">
+                        <input type="range" id="discount-rate" min="5" max="30" value="10" step="1">
+                        <div class="range-value"><span id="rate-display">10</span>%</div>
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" id="calculate-btn">
+                    <i class="fas fa-calculator"></i> Calculate Returns
+                </button>
+                
+                <div class="tools-highlight">
+                    <h4>Advanced Features & Tools:</h4>
+                    <div class="tools-list">
+                        <div class="tool"><i class="fas fa-check-circle"></i> Auto-calculation</div>
+                        <div class="tool"><i class="fas fa-chart-pie"></i> Visual Analytics</div>
+                        <div class="tool"><i class="fas fa-download"></i> Export to PDF</div>
+                        <div class="tool"><i class="fas fa-file-contract"></i> Generate Agreement</div>
+                        <div class="tool"><i class="fas fa-mobile-alt"></i> Mobile Responsive</div>
+                        <div class="tool"><i class="fas fa-sync-alt"></i> Real-time Updates</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator-results fade-in">
+                <div class="results-header">
+                    <h3>Payment Schedule & Returns</h3>
+                    <div class="total-summary">
+                        <div class="summary-card">
+                            <h4>Total Investment</h4>
+                            <p id="total-investment">₹1,50,000</p>
+                        </div>
+                        <div class="summary-card">
+                            <h4>Total Returns</h4>
+                            <p id="total-returns">₹3,00,000</p>
+                        </div>
+                        <div class="summary-card total-profit">
+                            <h4>Net Profit</h4>
+                            <p id="net-profit">₹1,50,000</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="chit-table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Monthly Payment</th>
+                                <th>Discount Amount</th>
+                                <th>Net Amount Received</th>
+                                <th>Total Received</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <!-- Table rows will be generated here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <button id="export-btn" style="padding: 0.8rem 1.5rem; background: rgba(0, 180, 216, 0.1); border: 1px solid rgba(0, 180, 216, 0.3); color: var(--accent-blue); border-radius: 8px; cursor: pointer;">
+                            <i class="fas fa-download"></i> Export as PDF
+                        </button>
+                        <button id="print-btn" style="padding: 0.8rem 1.5rem; background: rgba(46, 196, 182, 0.1); border: 1px solid rgba(46, 196, 182, 0.3); color: var(--accent-green); border-radius: 8px; cursor: pointer; margin-left: 1rem;">
+                            <i class="fas fa-print"></i> Print Schedule
+                        </button>
+                    </div>
+                    <div style="color: var(--text-gray); font-size: 0.9rem;">
+                        <i class="fas fa-info-circle" style="color: var(--accent-blue);"></i> 
+                        Calculations are approximate. Actual returns may vary based on auction discounts.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-title fade-in">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our financial advisors for personalized guidance</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card fade-in">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-card-content">
+                        <h4>Our Locations</h4>
+                        <p><strong>Head Office:</strong> Hyderabad, Telangana</p>
+                        <p><strong>Branch Office:</strong> Mahbubnagar, Telangana</p>
+                        <div class="locations-container">
+                            <div class="location-tag">
+                                <i class="fas fa-map-marker-alt"></i> Hyderabad
+                            </div>
+                            <div class="location-tag">
+                                <i class="fas fa-map-marker-alt"></i> Mahbubnagar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="contact-card-content">
+                        <h4>Phone Numbers</h4>
+                        <p><strong>Primary:</strong> +91 9988776655</p>
+                        <p><strong>Support:</strong> +91 91234 56789</p>
+                        <p><strong>Landline:</strong> 040-12345678</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-card-content">
+                        <h4>Email Address</h4>
+                        <p>info@venkateshgoudchits.com</p>
+                        <p>support@venkateshgoudchits.com</p>
+                        <p>investments@venkateshgoudchits.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-card fade-in">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-card-content">
+                        <h4>Working Hours</h4>
+                        <p>Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                        <p>Sunday: 10:00 AM - 2:00 PM</p>
+                        <p style="margin-top: 0.5rem; color: var(--accent-green);">
+                            <i class="fas fa-headset"></i> 24/7 Customer Support Available
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form fade-in">
+                <h3>Send us a message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone Number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select style="width: 100%; padding: 1rem 1.2rem; background-color: rgba(10, 25, 47, 0.8); border: 1px solid rgba(46, 196, 182, 0.2); border-radius: 10px; color: var(--text-light); font-size: 1rem;">
+                            <option value="" disabled selected>Select Investment Interest</option>
+                            <option value="short-term">Short Term (1-2 Years)</option>
+                            <option value="medium-term">Medium Term (3-5 Years)</option>
+                            <option value="long-term">Long Term (5+ Years)</option>
+                            <option value="consultation">Just Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea placeholder="Your Message / Query" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <div class="footer-logo-item">
+                <div class="footer-icon">
+                    <i class="fas fa-om"></i>
+                </div>
+                <div class="footer-icon-text">Lord Ganesh<br>Blessings</div>
+            </div>
+            
+            <div class="footer-logo-item">
+                <div class="footer-icon">
+                    <i class="fas fa-hands-praying"></i>
+                </div>
+                <div class="footer-icon-text">Lord Venkateshwara Swamy<br>Divine Protection</div>
+            </div>
+            
+            <div class="footer-logo-item">
+                <div class="footer-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <div class="footer-icon-text">Wealth & Prosperity<br>Attraction</div>
+            </div>
+        </div>
+        
+        <p class="footer-text">Venkatesh Goud & Sons Chit Funds is committed to providing secure and profitable investment opportunities. With divine blessings and ethical operations, we help customers achieve their financial goals through transparent chit fund services.</p>
+        
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <p class="copyright">
+            © 2023 Venkatesh Goud & Sons Chit Funds. All Rights Reserved. | License No: CHIT/TS/456/2020 | 
+            <a href="#" style="color: var(--accent-blue); text-decoration: none;">Privacy Policy</a> | 
+            <a href="#" style="color: var(--accent-blue); text-decoration: none;">Terms & Conditions</a>
+        </p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        // Calculate chit fund returns
+        const calculateBtn = document.getElementById('calculate-btn');
+        const chitValueInput = document.getElementById('chit-value');
+        const monthsInput = document.getElementById('months');
+        const monthlyPaymentInput = document.getElementById('monthly-payment');
+        const discountRateInput = document.getElementById('discount-rate');
+        const rateDisplay = document.getElementById('rate-display');
+        const tableBody = document.getElementById('table-body');
+        const totalInvestmentEl = document.getElementById('total-investment');
+        const totalReturnsEl = document.getElementById('total-returns');
+        const netProfitEl = document.getElementById('net-profit');
+        
+        // Update discount rate display
+        discountRateInput.addEventListener('input', () => {
+            rateDisplay.textContent = discountRateInput.value;
+        });
+        
+        // Initial calculation on page load
+        calculateChitReturns();
+        
+        // Calculate on button click
+        calculateBtn.addEventListener('click', calculateChitReturns);
+        
+        // Calculate on input change
+        [chitValueInput, monthsInput, monthlyPaymentInput, discountRateInput].forEach(input => {
+            input.addEventListener('input', calculateChitReturns);
+        });
+        
+        function calculateChitReturns() {
+            const chitValue = parseFloat(chitValueInput.value);
+            const months = parseInt(monthsInput.value);
+            const monthlyPayment = parseFloat(monthlyPaymentInput.value);
+            const discountRate = parseFloat(discountRateInput.value) / 100;
+            
+            // Calculate total investment
+            const totalInvestment = monthlyPayment * months;
+            
+            // Calculate returns (chit value minus total discount)
+            const totalDiscount = chitValue * discountRate;
+            const totalReturns = chitValue - totalDiscount;
+            
+            // Calculate net profit
+            const netProfit = totalReturns - totalInvestment;
+            
+            // Update summary cards
+            totalInvestmentEl.textContent = formatCurrency(totalInvestment);
+            totalReturnsEl.textContent = formatCurrency(totalReturns);
+            netProfitEl.textContent = formatCurrency(netProfit);
+            
+            // Clear table
+            tableBody.innerHTML = '';
+            
+            let runningTotal = 0;
+            
+            // Generate table rows
+            for (let month = 1; month <= months; month++) {
+                const row = document.createElement('tr');
+                
+                // Determine if this month has discount (simulating auction months)
+                const hasDiscount = month % 5 === 0 || month === months;
+                const discountAmount = hasDiscount ? chitValue * discountRate : 0;
+                const netAmount = hasDiscount ? chitValue - discountAmount : 0;
+                
+                runningTotal += netAmount;
+                
+                // Month cell
+                const monthCell = document.createElement('td');
+                monthCell.textContent = `Month ${month}`;
+                monthCell.className = 'month-cell';
+                if (hasDiscount) {
+                    monthCell.innerHTML += ` <i class="fas fa-gavel" style="color: var(--accent-gold); font-size: 0.8rem;"></i>`;
+                }
+                
+                // Monthly payment cell
+                const paymentCell = document.createElement('td');
+                paymentCell.textContent = formatCurrency(monthlyPayment);
+                paymentCell.className = 'amount-cell';
+                
+                // Discount cell
+                const discountCell = document.createElement('td');
+                discountCell.textContent = hasDiscount ? formatCurrency(discountAmount) : '-';
+                discountCell.style.color = hasDiscount ? 'var(--accent-purple)' : 'var(--text-gray)';
+                
+                // Net amount cell
+                const netCell = document.createElement('td');
+                netCell.textContent = hasDiscount ? formatCurrency(netAmount) : '-';
+                netCell.className = hasDiscount ? 'amount-cell' : '';
+                
+                // Total received cell
+                const totalCell = document.createElement('td');
+                totalCell.textContent = formatCurrency(runningTotal);
+                totalCell.className = 'total-cell';
+                
+                // Append cells to row
+                row.appendChild(monthCell);
+                row.appendChild(paymentCell);
+                row.appendChild(discountCell);
+                row.appendChild(netCell);
+                row.appendChild(totalCell);
+                
+                // Add animation delay
+                row.style.animationDelay = `${month * 0.05}s`;
+                
+                // Append row to table
+                tableBody.appendChild(row);
+            }
+        }
+        
+        function formatCurrency(amount) {
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+        
+        // Export buttons functionality
+        document.getElementById('export-btn').addEventListener('click', () => {
+            alert('Export feature would generate a PDF with the current calculation results.');
+        });
+        
+        document.getElementById('print-btn').addEventListener('click', () => {
+            window.print();
+        });
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! Our financial advisor will contact you within 24 hours.');
+            e.target.reset();
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with fade-in class
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Add some interactive effects to summary cards
+        document.querySelectorAll('.summary-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
